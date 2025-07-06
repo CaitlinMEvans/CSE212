@@ -33,6 +33,8 @@ public static class Algorithms {
     /// The count variable is keeping track of the amount
     /// of work done in the function.  When the function is 
     /// done the count is returned.
+    /// 
+    /// BIG O PREDICTION: O(n) - Single loop from 0 to size
     /// </summary>
     /// <param name="size">the amount of work to do</param>
     private static int Algorithm1(int size) {
@@ -47,6 +49,8 @@ public static class Algorithms {
     /// The count variable is keeping track of the amount
     /// of work done in the function.  When the function is 
     /// done the count is returned.
+    /// 
+    /// BIG O PREDICTION: O(n²) - Nested loops, both dependent on size
     /// </summary>
     /// <param name="size">the amount of work to do</param>
     private static int Algorithm2(int size) {
@@ -62,6 +66,8 @@ public static class Algorithms {
     /// The count variable is keeping track of the amount
     /// of work done in the function.  When the function is 
     /// done the count is returned.
+    /// 
+    /// BIG O PREDICTION: O(log n) - Divides search space in half each iteration
     /// </summary>
     /// <param name="size">the amount of work to do</param>
     private static int Algorithm3(int size) {
