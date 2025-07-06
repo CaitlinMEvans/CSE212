@@ -5,6 +5,11 @@
         Console.Out.WriteLine("int[]{{{0}}}", string.Join(", ", numbers)); //int[]{1, 2, 3, 4, 6, 8, 9}
     }
 
+    /// <summary>
+    /// BIG O ANALYSIS: O(n²) - Bubble Sort Algorithm
+    /// Outer loop runs n times, inner loop runs up to n times
+    /// Total operations: n * n = n²
+    /// </summary>
     private static void SortArray(int[] data) {
         for (var sortPos = data.Length - 1; sortPos >= 0; sortPos--) {
             for (var swapPos = 0; swapPos < sortPos; ++swapPos) {

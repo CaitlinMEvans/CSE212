@@ -12,6 +12,10 @@ public static class StandardDeviation {
         Console.WriteLine(StandardDeviation3(numbers)); // Should be 147.322 
     }
 
+    /// <summary>
+    /// BIG O ANALYSIS: O(n) - Linear Time
+    /// Two separate loops, each running n times: O(n) + O(n) = O(n)
+    /// </summary>
     private static double StandardDeviation1(int[] numbers) {
         var total = 0.0;
         var count = 0;
@@ -30,6 +34,11 @@ public static class StandardDeviation {
         return Math.Sqrt(variance);
     }
 
+    /// <summary>
+    /// BIG O ANALYSIS: O(n²) - Quadratic Time
+    /// Outer loop runs n times, inner loop runs n times each iteration
+    /// Calculates the average inside the outer loop repeatedly (inefficient)
+    /// </summary>
     private static double StandardDeviation2(int[] numbers) {
         var sumSquaredDifferences = 0.0;
         var countNumbers = 0;
@@ -50,6 +59,11 @@ public static class StandardDeviation {
         return Math.Sqrt(variance);
     }
 
+    /// <summary>
+    /// BIG O ANALYSIS: O(n) - Linear Time
+    /// Sum() method is O(n), plus one loop of O(n) = O(n)
+    /// Most efficient implementation
+    /// </summary>
     private static double StandardDeviation3(int[] numbers) {
         var count = numbers.Length;
         var avg = (double)numbers.Sum() / count;
